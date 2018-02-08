@@ -8,11 +8,11 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>FD62FA2A-D3A2-428E-B5DA-F661F7AD7492</key>
+		<key>78BD405C-FB34-4A8A-AF98-168AF3CA1BA4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3F028245-65A5-4897-9E97-127A47BB4E19</string>
+				<string>A75572AC-857B-4828-8A82-BFA926CCFFA3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -35,25 +35,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>3F028245-65A5-4897-9E97-127A47BB4E19</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -61,7 +42,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -85,37 +66,56 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>AWS Role Switcher</string>
+				<string>Switch AWS Roles</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>FD62FA2A-D3A2-428E-B5DA-F661F7AD7492</string>
+			<string>78BD405C-FB34-4A8A-AF98-168AF3CA1BA4</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A75572AC-857B-4828-8A82-BFA926CCFFA3</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>3F028245-65A5-4897-9E97-127A47BB4E19</key>
+		<key>78BD405C-FB34-4A8A-AF98-168AF3CA1BA4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>470</integer>
+			<integer>90</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>60</integer>
 		</dict>
-		<key>FD62FA2A-D3A2-428E-B5DA-F661F7AD7492</key>
+		<key>A75572AC-857B-4828-8A82-BFA926CCFFA3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>150</integer>
+			<integer>60</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

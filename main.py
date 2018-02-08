@@ -8,11 +8,9 @@ from os.path import expanduser
 # Workflow3 supports Alfred 3's new features. The `Workflow` class
 # is also compatible with Alfred 2.
 from workflow import Workflow3
-import boto3
 
 
 def main(wf):
-    import subprocess
     # Get args from Workflow3, already in normalized Unicode.
     # This is also necessary for "magic" arguments to work.
     args = wf.args
@@ -20,8 +18,6 @@ def main(wf):
     if len(wf.args):
         query = wf.args[0]
 
-    # client = boto3.client('iam')
-    # roles = client.list_roles()['Roles']
     home = expanduser("~")
 
     with open('{}/.aws/config'.format(home)) as f:
@@ -46,15 +42,7 @@ def main(wf):
                 roles.append(current_role)
                 current_role = {}
 
-
-
-    # items = [
-    #      role['RoleName'] for role in roles
-    # ]
-
     items = wf.filter(query, roles, lambda x: x['title'])
-    log.info(items)
-
 
     if not items:
         wf.add_item('No matches')
@@ -66,11 +54,13 @@ def main(wf):
         wf.add_item(title=item['title'],
         subtitle='Account: {}'.format(item['account_id']),
         valid=True,
-        arg='https://signin.aws.amazon.com/switchrole?account={}&roleName={}'.format(
-            item['account_id'],
-            item['role']
-        )
+        arg=('https://signin.aws.amazon.com/'
+             'switchrole?account={}&roleName={}&displayName={}').format(
+                item['account_id'],
+                item['role'],
+                item['title']
             )
+        )
 
     # Send output to Alfred. You can only call this once.
     # Well, you *can* call it multiple times, but subsequent calls
